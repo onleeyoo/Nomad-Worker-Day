@@ -24,12 +24,12 @@ export type Result = {
 export const results: Record<ResultType, Result> = {
   BFD: {
     type: "BFD",
-    goodsName: "프리미엄 소고기 육포",
-    emoji: "🥩",
+    goodsName: "배달의 민족",
+    emoji: "🛵",
     catchphrase:
-      "마감에 쫓겨 밥 먹을 시간도 없을 때, 턱관절의 분노를 단백질 충전으로 승화시켜 줄 고급진 생존 간식.",
+      "마감에 쫓겨 밥 차릴 시간조차 없을 때, 터치 몇 번으로 책상 앞까지 구호물자를 배달해 줄 든든한 생존 치트키!",
     description:
-      "쉴 새 없이 굴러가는 마감의 챗바퀴, 끼니는 맥락 없이 거르고 있죠. 빠르게 단백질이라도 욱여넣으세요. 당신의 턱관절과 멘탈은 지금 SOS 신호 중입니다.",
+      "마감 시계는 계속 돌아가는데, 끼니는 자꾸 뒷전으로 밀리고 있죠. 마감과 타협하지 말고, 메뉴와 타협하세요. 터치 몇 번이면 든든한 한 끼가 책상 앞까지 도착합니다.",
     axes: { deficiency: "신체", recovery: "즉각 충전", intensity: "마감 압박" },
   },
   BFC: {
@@ -84,12 +84,11 @@ export const results: Record<ResultType, Result> = {
   },
   MED: {
     type: "MED",
-    goodsName: "무드 체인저 룸스프레이",
-    emoji: "🌿",
-    catchphrase:
-      "영감이 도무지 떠오르지 않을 때, 칙- 한 번으로 방 안의 공기와 기분까지 환기시켜 줄 리프레시 버튼.",
+    goodsName: "릴랙싱 아로마",
+    emoji: "🕯️",
+    catchphrase: "복잡한 머릿속을 숲속처럼 비워주는 마법의 물약.",
     description:
-      "마감은 다가오는데 머릿속만 텅 비어버린 그 답답한 순간. 자리에서 일어날 여유조차 없다면, 공기부터 바꿔보세요. 칙- 한 번이면 분위기가 바뀌고, 그제서야 새 아이디어가 끼어들 틈이 생깁니다.",
+      "마감 압박에 머리가 곧 터질 것 같은 순간, 책상에서 한 발짝도 뗄 수 없다면 향부터 들이마셔 보세요. 한 모금의 향이 책상 위로 작은 숲을 부르고, 그제서야 막힌 영감이 다시 흘러갈 길을 찾습니다.",
     axes: { deficiency: "정신", recovery: "환경 전환", intensity: "마감 압박" },
   },
   MEC: {
