@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-6 pb-12 pt-6 text-center">
@@ -17,14 +19,14 @@ export default function Home() {
         지금 당신에게 필요한 생존템은?
       </p>
 
-      <button
-        type="button"
+      <Link
+        href="/test"
         className="gradient-bg text-white text-[16px] font-semibold px-10 py-4 rounded-full shadow-md shadow-purple-main/30 transition-transform active:scale-[0.98]"
       >
         테스트 시작하기
-      </button>
+      </Link>
 
-      <p className="mt-6 text-xs text-text-sub">약 1분 소요 · 16문항</p>
+      <p className="mt-6 text-xs text-text-sub">약 1분 소요 · 15문항</p>
     </div>
   );
 }
