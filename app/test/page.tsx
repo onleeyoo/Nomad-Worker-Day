@@ -52,7 +52,7 @@ export default function TestPage() {
   };
 
   return (
-    <div className="flex-1 flex flex-col px-5 pt-5 pb-10">
+    <div className="flex-1 flex flex-col px-5 pt-5 pb-[max(env(safe-area-inset-bottom),32px)]">
       <div className="flex items-center gap-3 mb-8">
         <button
           type="button"
@@ -90,11 +90,11 @@ export default function TestPage() {
       >
         <p
           aria-hidden="true"
-          className="font-paperlogy gradient-text text-[clamp(96px,28vw,140px)] font-extrabold leading-none text-center mb-6"
+          className="font-paperlogy gradient-text text-[clamp(80px,22vw,140px)] font-extrabold leading-none text-center mb-[clamp(12px,3vh,24px)]"
         >
           Q{currentIndex + 1}
         </p>
-        <h2 className="font-paperlogy text-[24px] font-bold leading-snug text-text-main text-center mb-10 px-2 text-balance">
+        <h2 className="font-paperlogy text-[clamp(20px,5.5vw,24px)] font-bold leading-snug text-text-main text-center mb-[clamp(20px,5vh,40px)] px-2 text-balance">
           {current.question}
         </h2>
 
@@ -121,7 +121,7 @@ export default function TestPage() {
         </div>
       </div>
 
-      <div className="mt-8 flex justify-center">
+      <div className="mt-[clamp(16px,4vh,32px)] flex justify-center">
         <Image
           src="/logo.png"
           alt="공이공이 프로덕션"

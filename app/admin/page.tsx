@@ -138,7 +138,7 @@ export default function AdminPage() {
 
   if (authed === null) {
     return (
-      <div className="px-5 py-12 text-center text-text-sub text-[14px]">
+      <div className="px-5 pt-12 pb-[max(env(safe-area-inset-bottom),32px)] text-center text-text-sub text-[14px]">
         불러오는 중...
       </div>
     );
@@ -146,7 +146,7 @@ export default function AdminPage() {
 
   if (!authed) {
     return (
-      <div className="px-5 py-12">
+      <div className="px-5 pt-12 pb-[max(env(safe-area-inset-bottom),32px)]">
         <h1 className="text-[20px] font-bold mb-1">관리자 로그인</h1>
         <p className="text-[13px] text-text-sub mb-6">
           신청자 목록을 보려면 로그인이 필요합니다.
@@ -188,7 +188,7 @@ export default function AdminPage() {
   }, {});
 
   return (
-    <div className="px-5 py-6">
+    <div className="px-5 pt-6 pb-[max(env(safe-area-inset-bottom),32px)]">
       <div className="flex justify-between items-center mb-5">
         <h1 className="font-paperlogy text-[20px] font-bold">관리자</h1>
         <button

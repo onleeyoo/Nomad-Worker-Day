@@ -28,7 +28,7 @@ export default function ResultPage({ params }: Props) {
   if (!result) notFound();
 
   return (
-    <div className="flex-1 flex flex-col px-5 pt-6 pb-12 fade-in">
+    <div className="flex-1 flex flex-col px-5 pt-6 pb-[max(env(safe-area-inset-bottom),48px)] fade-in">
       <div className="mb-7 flex justify-center">
         <Image
           src="/logo.png"
@@ -53,9 +53,9 @@ export default function ResultPage({ params }: Props) {
         </div>
 
         <div className="flex justify-center mb-8">
-          <div className="gradient-bg w-[200px] h-[200px] rounded-full flex items-center justify-center shadow-xl shadow-purple-main/25">
+          <div className="gradient-bg w-[clamp(160px,48vw,200px)] aspect-square rounded-full flex items-center justify-center shadow-xl shadow-purple-main/25">
             <span
-              className="text-[88px] leading-none"
+              className="text-[clamp(72px,22vw,88px)] leading-none"
               role="img"
               aria-label={result.goodsName}
             >
@@ -64,11 +64,11 @@ export default function ResultPage({ params }: Props) {
           </div>
         </div>
 
-        <h1 className="font-paperlogy text-[28px] font-extrabold leading-tight text-text-main text-center mb-6 text-balance">
+        <h1 className="font-paperlogy text-[clamp(24px,7vw,28px)] font-extrabold leading-tight text-text-main text-center mb-6 text-balance">
           {result.goodsName}
         </h1>
 
-        <p className="text-[16px] leading-[1.7] text-text-main text-center px-2 mb-4 text-balance">
+        <p className="text-[clamp(15px,4.2vw,16px)] leading-[1.7] text-text-main text-center px-2 mb-4 text-balance">
           {result.catchphrase}
         </p>
 
