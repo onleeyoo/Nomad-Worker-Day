@@ -22,9 +22,8 @@ export default function ResultActions({ goodsName, captureId }: Props) {
 
     setSaving(true);
 
-    const captureModeEls = target.querySelectorAll<HTMLElement>(
-      ".gradient-text, .goods-emoji-wrapper",
-    );
+    const captureModeEls =
+      target.querySelectorAll<HTMLElement>(".gradient-text");
     captureModeEls.forEach((el) => el.classList.add("capture-mode"));
 
     try {

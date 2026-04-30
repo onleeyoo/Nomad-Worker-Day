@@ -12,6 +12,7 @@ export type Result = {
   type: ResultType;
   goodsName: string;
   emoji: string;
+  gifUrl: string;
   catchphrase: string;
   description: string;
   axes: {
@@ -26,6 +27,8 @@ export const results: Record<ResultType, Result> = {
     type: "BFD",
     goodsName: "배달 음식",
     emoji: "🛵",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHAwdHFvZ3k0azBubHU4ZjBwaTZnbWlkNmdpczJwcXN1OWN5OTM4bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/eSQKNSmg07dHq/giphy.gif",
     catchphrase:
       "마감에 쫓겨 밥 차릴 시간조차 없을 때,\n터치 몇 번으로 책상 앞까지 구호물자를 배달해 줄\n든든한 생존 치트키!",
     description:
@@ -36,6 +39,8 @@ export const results: Record<ResultType, Result> = {
     type: "BFC",
     goodsName: "비타민 젤리",
     emoji: "🍬",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Njl2Y3R6M2t6cTEwZmR0eG41OTlwNDJ4ejNuZHM5MDF2djY2ZWw4dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3ov9k5wdvgTEm4yY0w/giphy.gif",
     catchphrase:
       "체력이 바닥난 오후 3시,\n쫀득한 식감과 함께 텐션을 수직 상승시켜 줄\n부스터 아이템.",
     description:
@@ -46,6 +51,8 @@ export const results: Record<ResultType, Result> = {
     type: "BED",
     goodsName: "탁상용 미니 선풍기",
     emoji: "🪭",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTRyYmthNm8xam1od2pqaGR4eWhoenhzbTJ5dWMxM2xoYTFma3JjcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/KhdQ2Ia3FJuKs/giphy.gif",
     catchphrase:
       "과부하 걸린 노트북의 열기도,\n마감 직전 폭발하기 일보 직전인 내 머리도\n차분하게 식혀줄 시원한 오아시스!",
     description:
@@ -56,6 +63,8 @@ export const results: Record<ResultType, Result> = {
     type: "BEC",
     goodsName: "손목보호 마우스패드",
     emoji: "🖱️",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajV4ZGJqb3Bqb28yYmlmdDUxNWQ0ZWhwcjEzb3lqdmJoOGFndnd5NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/QqkRs73FlKO52/giphy.gif",
     catchphrase:
       "수만 번의 클릭과 드래그를 견뎌낸\n당신의 소중한 손목을 포근하게 안아줄\n폭신한 구름.",
     description:
@@ -66,6 +75,8 @@ export const results: Record<ResultType, Result> = {
     type: "MFD",
     goodsName: "액막이 명태 인형",
     emoji: "🐟",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTVjaGtzdzNwbjJhMnJ2N28waWhpbWpvejlzcm9hc3NqbXF4c2VwYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/aGgatrxwzn9UmBqH6l/giphy.gif",
     catchphrase:
       "나쁜 클라이언트와 에러는 꿀꺽 삼키고,\n칼퇴와 칼입금을 불러오는 든든한 수호자!",
     description:
@@ -76,6 +87,8 @@ export const results: Record<ResultType, Result> = {
     type: "MFC",
     goodsName: "스페셜티 드립백",
     emoji: "☕",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2sxNmExdWMyc3I2YmZjZXo1bjhhemJjZzhxMWZwaHlnbDlxZjg3OCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/igFPpuVhit5j3cmJJI/giphy.gif",
     catchphrase:
       "카페인 수혈이 시급한 순간,\n작업실을 순식간에 분위기 있는 로스터리로 만들어줄\n각성 포션.",
     description:
@@ -86,6 +99,8 @@ export const results: Record<ResultType, Result> = {
     type: "MED",
     goodsName: "릴랙싱 아로마 오일",
     emoji: "🕯️",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGVqOXc5ZWdmc2E1dzJ1emJxc2U3aXpxYjhhNzEyajZsbmVuMXJzayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/w09VyQCeyDGE0/giphy.gif",
     catchphrase: "복잡한 머릿속을 숲속처럼 비워주는\n마법의 향기.",
     description:
       "마감 압박에 머리가 곧 터질 것 같은 순간,\n책상에서 한 발짝도 뗄 수 없다면 향부터 들이마셔 보세요.\n한 모금의 향이 책상 위로 작은 숲을 부르고,\n그제서야 막힌 영감이 다시 흘러갈 길을 찾습니다.",
@@ -95,6 +110,8 @@ export const results: Record<ResultType, Result> = {
     type: "MEC",
     goodsName: "영화 관람",
     emoji: "🎬",
+    gifUrl:
+      "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MzFzc21ud201eDd5OWRkYTQ5dnZhcGRhOHg2eDExcXRvM3RlaGZydSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/LvaswPm6IHn44/giphy.gif",
     catchphrase:
       "답답한 모니터는 이제 그만!\n압도적인 대형 스크린으로 눈과 마음을 정화하고\n'진짜 영감'을 채울 시간.",
     description:
