@@ -91,7 +91,7 @@ export default function TestPage() {
           {current.question}
         </h2>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           {current.options.map((opt, idx) => {
             const isSelected = selectedIndex === idx;
             return (
@@ -99,13 +99,13 @@ export default function TestPage() {
                 key={idx}
                 type="button"
                 onClick={() => handleSelect(idx as 0 | 1)}
-                className={`text-left bg-white rounded-2xl px-5 py-5 border-2 transition-all duration-200 disabled:cursor-default ${
+                className={`bg-white rounded-3xl px-6 py-5 text-center transition-all duration-200 disabled:cursor-default ${
                   isSelected
-                    ? "border-purple-main shadow-md shadow-purple-main/25 scale-[0.99]"
-                    : "border-border-light hover:border-purple-main/60 hover:shadow-sm"
+                    ? "shadow-[0_16px_40px_-4px_rgba(123,122,232,0.35),0_8px_20px_-2px_rgba(216,155,232,0.25)] -translate-y-0.5 scale-[0.99]"
+                    : "shadow-[0_8px_24px_-4px_rgba(123,122,232,0.15),0_4px_12px_-2px_rgba(216,155,232,0.1)] hover:shadow-[0_12px_32px_-4px_rgba(123,122,232,0.25),0_6px_16px_-2px_rgba(216,155,232,0.15)] hover:-translate-y-0.5"
                 }`}
               >
-                <span className="text-[15px] leading-relaxed text-text-main">
+                <span className="text-[15px] leading-[1.6] text-text-main">
                   {opt.text}
                 </span>
               </button>
