@@ -190,7 +190,7 @@ export default function AdminPage() {
   return (
     <div className="px-5 py-6">
       <div className="flex justify-between items-center mb-5">
-        <h1 className="text-[20px] font-bold">관리자</h1>
+        <h1 className="font-paperlogy text-[20px] font-bold">관리자</h1>
         <button
           type="button"
           onClick={handleLogout}
@@ -208,7 +208,7 @@ export default function AdminPage() {
 
       <div className="gradient-bg rounded-2xl p-5 text-white text-center mb-5 shadow-md shadow-purple-main/25">
         <p className="text-[12px] opacity-90 mb-1">총 신청자 수</p>
-        <p className="text-[40px] font-bold leading-none">
+        <p className="font-paperlogy text-[40px] font-extrabold leading-none">
           {total}
           <span className="text-[18px] font-medium opacity-90 ml-1">명</span>
         </p>

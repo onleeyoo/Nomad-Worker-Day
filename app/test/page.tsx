@@ -88,7 +88,7 @@ export default function TestPage() {
         key={currentIndex}
         className="flex-1 flex flex-col justify-center fade-in"
       >
-        <h2 className="text-[24px] font-bold leading-snug text-text-main text-center mb-10 px-2 text-balance">
+        <h2 className="font-paperlogy text-[24px] font-bold leading-snug text-text-main text-center mb-10 px-2 text-balance">
           {current.question}
         </h2>
 

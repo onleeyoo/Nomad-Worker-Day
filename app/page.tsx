@@ -28,7 +28,7 @@ export default function Home() {
         className="hero-rise mt-12 w-full max-w-[360px]"
         style={{ animationDelay: "0.18s" }}
       >
-        <h1 className="text-[34px] font-bold leading-[1.2] text-text-main mb-4">
+        <h1 className="font-paperlogy text-[34px] font-extrabold leading-[1.2] text-text-main mb-4">
           2026 <span className="gradient-text">프리랜서의 날</span>
         </h1>
         <p className="text-[18px] leading-relaxed text-text-sub mb-5">

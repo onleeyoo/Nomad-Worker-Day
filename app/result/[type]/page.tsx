@@ -35,7 +35,7 @@ export default function ResultPage({ params }: Props) {
   return (
     <div className="flex-1 flex flex-col px-5 pt-4 pb-12 fade-in">
       <div id={CAPTURE_ID} className="bg-white px-1 pt-2 pb-4">
-        <p className="text-[12px] text-text-sub text-center tracking-wide mb-5">
+        <p className="font-paperlogy text-[12px] text-text-sub text-center tracking-wide mb-5">
           프리랜서의 날{" "}
           <span className="gradient-text font-semibold">처방전</span>
         </p>
@@ -52,7 +52,7 @@ export default function ResultPage({ params }: Props) {
           </div>
         </div>
 
-        <h1 className="text-[28px] font-bold leading-tight text-text-main text-center mb-4 text-balance">
+        <h1 className="font-paperlogy text-[28px] font-extrabold leading-tight text-text-main text-center mb-4 text-balance">
           {result.goodsName}
         </h1>
 

@@ -18,6 +18,7 @@ const config: Config = {
       },
       fontFamily: {
         pretendard: [
+          "Pretendard Variable",
           "Pretendard",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -30,6 +31,7 @@ const config: Config = {
           "Malgun Gothic",
           "sans-serif",
         ],
+        paperlogy: ["Paperlogy", "Pretendard Variable", "sans-serif"],
       },
     },
   },
