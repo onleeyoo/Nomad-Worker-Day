@@ -88,6 +88,12 @@ export default function TestPage() {
         key={currentIndex}
         className="flex-1 flex flex-col justify-center fade-in"
       >
+        <p
+          aria-hidden="true"
+          className="font-paperlogy gradient-text text-[clamp(96px,28vw,140px)] font-extrabold leading-none text-center mb-6"
+        >
+          Q{currentIndex + 1}
+        </p>
         <h2 className="font-paperlogy text-[24px] font-bold leading-snug text-text-main text-center mb-10 px-2 text-balance">
           {current.question}
         </h2>
