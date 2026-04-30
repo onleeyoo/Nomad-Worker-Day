@@ -22,8 +22,10 @@ export default function ResultActions({ goodsName, captureId }: Props) {
 
     setSaving(true);
 
-    const gradientEls = target.querySelectorAll<HTMLElement>(".gradient-text");
-    gradientEls.forEach((el) => el.classList.add("capture-mode"));
+    const captureModeEls = target.querySelectorAll<HTMLElement>(
+      ".gradient-text, .goods-emoji-wrapper",
+    );
+    captureModeEls.forEach((el) => el.classList.add("capture-mode"));
 
     try {
       try {
@@ -50,7 +52,7 @@ export default function ResultActions({ goodsName, captureId }: Props) {
       console.error("[result image save]", e);
       alert("이미지 저장에 실패했습니다. 다시 시도해주세요.");
     } finally {
-      gradientEls.forEach((el) => el.classList.remove("capture-mode"));
+      captureModeEls.forEach((el) => el.classList.remove("capture-mode"));
       setSaving(false);
     }
   };

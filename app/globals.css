@@ -45,6 +45,10 @@ body {
     color: #7b7ae8 !important;
   }
 
+  .goods-emoji-wrapper.capture-mode .goods-emoji {
+    transform: translateY(8%);
+  }
+
   .text-balance {
     text-wrap: balance;
   }
