@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 type Props = {
   goodsName: string;
@@ -9,14 +8,15 @@ type Props = {
 };
 
 export default function ResultActions({ goodsName, captureId }: Props) {
-  const router = useRouter();
   const [saving, setSaving] = useState(false);
 
   const handleSaveImage = async () => {
     if (saving) return;
     const target = document.getElementById(captureId);
     if (!target) {
-      alert("이미지 영역을 찾지 못했습니다. 페이지를 새로고침 후 다시 시도해주세요.");
+      alert(
+        "이미지 영역을 찾지 못했습니다. 페이지를 새로고침 후 다시 시도해주세요.",
+      );
       return;
     }
 
@@ -48,22 +48,13 @@ export default function ResultActions({ goodsName, captureId }: Props) {
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full">
-      <button
-        type="button"
-        onClick={handleSaveImage}
-        disabled={saving}
-        className="w-full bg-white text-text-main text-[15px] font-semibold py-3.5 rounded-full border border-border-light hover:border-purple-main/60 transition-colors disabled:opacity-60"
-      >
-        {saving ? "저장 중..." : "결과 이미지 저장하기"}
-      </button>
-      <button
-        type="button"
-        onClick={() => router.push("/")}
-        className="w-full bg-white text-text-sub text-[15px] font-medium py-3.5 rounded-full border border-border-light hover:text-text-main hover:border-purple-main/40 transition-colors"
-      >
-        다시 테스트하기
-      </button>
-    </div>
+    <button
+      type="button"
+      onClick={handleSaveImage}
+      disabled={saving}
+      className="w-full bg-white text-text-main text-[15px] font-semibold py-3.5 rounded-full border border-border-light hover:border-purple-main/60 transition-colors disabled:opacity-60"
+    >
+      {saving ? "저장 중..." : "결과 이미지 저장하기"}
+    </button>
   );
 }
