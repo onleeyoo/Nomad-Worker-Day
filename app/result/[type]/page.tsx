@@ -68,11 +68,11 @@ export default function ResultPage({ params }: Props) {
           {result.goodsName}
         </h1>
 
-        <p className="text-[clamp(15px,4.2vw,16px)] leading-[1.7] text-text-main text-center px-2 mb-4 text-balance">
+        <p className="text-[clamp(15px,4.2vw,16px)] leading-[1.7] text-text-main text-center px-2 mb-4 whitespace-pre-line">
           {result.catchphrase}
         </p>
 
-        <p className="text-[14px] leading-[1.7] text-text-sub text-center px-2 text-balance">
+        <p className="text-[14px] leading-[1.7] text-text-sub text-center px-2 whitespace-pre-line">
           {result.description}
         </p>
       </div>
