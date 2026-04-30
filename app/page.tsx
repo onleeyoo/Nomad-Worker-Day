@@ -9,15 +9,23 @@ export default function Home() {
         </span>
       </div>
 
-      <h1 className="text-[24px] font-bold leading-tight text-text-main mb-3">
-        프리워커를 위한 <span className="gradient-text">처방전</span>
+      <h1 className="text-[26px] font-bold leading-tight text-text-main mb-3">
+        2026 <span className="gradient-text">프리랜서의 날</span>
       </h1>
 
-      <p className="text-[16px] leading-relaxed text-text-sub max-w-[320px] mb-12">
-        노동절에도 일하는 디지털노마드,
+      <p className="text-[16px] leading-relaxed text-text-sub max-w-[340px] mb-7">
+        남들 쉴 때 세상을 움직이는
         <br />
-        지금 당신에게 필요한 생존템은?
+        당신에게 필요한 건?
       </p>
+
+      <div className="bg-gray-bg rounded-2xl px-5 py-3.5 mb-10 max-w-[340px]">
+        <p className="text-[13px] leading-relaxed text-text-sub">
+          근로자의 날에도 묵묵히 마감을 치고 있는,
+          <br />
+          2026년 유정과 함께한 노마드 워커들
+        </p>
+      </div>
 
       <Link
         href="/test"

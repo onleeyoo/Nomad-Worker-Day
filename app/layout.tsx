@@ -3,9 +3,8 @@ import Image from "next/image";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "노마드워커의 날 - 프리워커를 위한 처방전",
-  description:
-    "노동절에도 일하는 디지털노마드, 지금 당신에게 필요한 생존템은?",
+  title: "2026 프리랜서의 날",
+  description: "남들 쉴 때 세상을 움직이는 당신에게 필요한 건?",
 };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ export function generateMetadata({ params }: Props) {
   const result = results[params.type as ResultType];
   if (!result) return {};
   return {
-    title: `${result.goodsName} | 프리워커를 위한 처방전`,
+    title: `${result.goodsName} | 2026 프리랜서의 날`,
     description: result.catchphrase,
   };
 }
@@ -36,7 +36,7 @@ export default function ResultPage({ params }: Props) {
     <div className="flex-1 flex flex-col px-5 pt-4 pb-12 fade-in">
       <div id={CAPTURE_ID} className="bg-white px-1 pt-2 pb-4">
         <p className="text-[12px] text-text-sub text-center tracking-wide mb-5">
-          프리워커를 위한{" "}
+          프리랜서의 날{" "}
           <span className="gradient-text font-semibold">처방전</span>
         </p>
 
