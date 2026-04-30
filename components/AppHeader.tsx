@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function AppHeader() {
   const pathname = usePathname();
-  if (pathname === "/") return null;
+  if (pathname === "/" || pathname === "/test") return null;
   return (
     <header className="px-5 pt-5 pb-2">
       <Image

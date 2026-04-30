@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { questions } from "@/lib/questions";
 import { calculateResult, type Answer } from "@/lib/calculate";
@@ -51,7 +52,7 @@ export default function TestPage() {
   };
 
   return (
-    <div className="flex-1 flex flex-col px-5 pt-2 pb-10">
+    <div className="flex-1 flex flex-col px-5 pt-5 pb-10">
       <div className="flex items-center gap-3 mb-8">
         <button
           type="button"
@@ -112,6 +113,16 @@ export default function TestPage() {
             );
           })}
         </div>
+      </div>
+
+      <div className="mt-8 flex justify-center">
+        <Image
+          src="/logo.png"
+          alt="공이공이 프로덕션"
+          width={861}
+          height={256}
+          className="h-6 w-auto opacity-60"
+        />
       </div>
     </div>
   );
