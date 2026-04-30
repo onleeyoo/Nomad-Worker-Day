@@ -1,4 +1,4 @@
-export type Axis = "BM" | "FE" | "DC";
+export type Axis = "BM" | "FE" | "DC" | "INTRO";
 export type ScoreKey = "B" | "M" | "F" | "E" | "D" | "C";
 export type Score = Partial<Record<ScoreKey, number>>;
 
@@ -13,11 +13,22 @@ export type Question = {
 };
 
 export const questions: Question[] = [
+  // ===== 인트로 (점수 영향 없음) =====
+  {
+    id: 0,
+    axis: "INTRO",
+    question: "노동절에도 처리할 업무가 남아 있나요?",
+    options: [
+      { text: "노동절에도 쉴 수 없는 난 프리랜서ㅠㅠ", score: {} },
+      { text: "오늘만큼은 나를 위한 힐링 타임!", score: {} },
+    ],
+  },
+
   // ===== 축 1. 결핍 영역: 신체(B) ↔ 정신(M) =====
   {
     id: 1,
     axis: "BM",
-    question: "지금 당장 나를 가장 괴롭히는 증상은?",
+    question: "지금 당장 나를 가장 힘들게 하는 증상은?",
     options: [
       { text: "뻐근한 목과 어깨, 무거운 눈꺼풀, 혹은 허기짐", score: { B: 1 } },
       {
@@ -62,16 +73,13 @@ export const questions: Question[] = [
     question: "업무 중 나도 모르게 가장 자주 튀어나오는 혼잣말은?",
     options: [
       { text: '"아 피곤해", "눈 아파", "배고파"', score: { B: 1 } },
-      {
-        text: '"아 하기 싫다", "이게 맞나?", "집에 가고 싶다"',
-        score: { M: 1 },
-      },
+      { text: '"집이지만 집에 가고 싶다"', score: { M: 1 } },
     ],
   },
   {
     id: 5,
     axis: "BM",
-    question: "현재 나에게 딱 하나만 주어질 수 있다면?",
+    question: "현재 나에게 딱 하나만 주어진다면?",
     options: [
       { text: "알람 없이 12시간 동안 죽은 듯이 푹 잘 수 있는 시간", score: { B: 1 } },
       {
@@ -87,7 +95,7 @@ export const questions: Question[] = [
     axis: "FE",
     question: "업무 중 스트레스가 극에 달했을 때, 가장 먼저 찾는 것은?",
     options: [
-      { text: "당 충전을 위한 믹스커피, 초콜릿, 혹은 젤리", score: { F: 1 } },
+      { text: "에너지 충전을 위한 커피, 초콜릿, 혹은 젤리", score: { F: 1 } },
       {
         text: "일단 자리에서 일어나 바깥 공기 쐬기 또는 화장실로 피신",
         score: { E: 1 },
@@ -99,7 +107,7 @@ export const questions: Question[] = [
     axis: "FE",
     question: "기분 전환을 위해 내 책상 위에 하나를 추가한다면?",
     options: [
-      { text: "언제든 꺼내 먹을 수 있는 프리미엄 간식 창고", score: { F: 1 } },
+      { text: "언제든 꺼내 먹을 수 있는 간식 창고", score: { F: 1 } },
       { text: "기분 좋은 향이 나는 디퓨저나 작고 귀여운 식물", score: { E: 1 } },
     ],
   },
@@ -168,7 +176,7 @@ export const questions: Question[] = [
     question: "아침에 눈을 떴을 때 가장 먼저 드는 생각은?",
     options: [
       { text: '"미친, 오늘 안으로 그거 다 끝낼 수 있을까?"', score: { D: 1 } },
-      { text: '"아... 또 출근이네. 언제 금요일 오나"', score: { C: 1 } },
+      { text: '"아... 하기 싫다"', score: { C: 1 } },
     ],
   },
   {
@@ -201,7 +209,7 @@ export const questions: Question[] = [
   {
     id: 15,
     axis: "DC",
-    question: "이 일이 끝나고 난 뒤(또는 금요일 저녁) 예상되는 나의 모습은?",
+    question: "이 일이 끝나고 난 뒤 예상되는 나의 모습은?",
     options: [
       { text: "하얗게 불태우고 장렬하게 전사하여 뻗어버림", score: { D: 1 } },
       {

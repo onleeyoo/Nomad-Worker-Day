@@ -47,7 +47,7 @@ export default function Home() {
         className="hero-rise mt-auto w-full pt-[clamp(20px,4vh,48px)]"
         style={{ animationDelay: "0.36s" }}
       >
-        <p className="text-[12px] text-text-sub mb-3">약 2분 소요 · 15문항</p>
+        <p className="text-[12px] text-text-sub mb-3">약 2분 소요 · 16문항</p>
         <Link
           href="/test"
           className="block w-full gradient-bg text-white text-[17px] font-bold py-[16px] rounded-full shadow-[0_12px_30px_rgba(123,122,232,0.45)] transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.99]"

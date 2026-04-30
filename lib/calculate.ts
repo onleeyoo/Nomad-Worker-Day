@@ -11,7 +11,7 @@ export function calculateResult(
 
   answers.forEach((a) => {
     const q = questions.find((q) => q.id === a.questionId);
-    if (!q) return;
+    if (!q || q.axis === "INTRO") return;
     const opt = q.options[a.selectedIndex];
     Object.entries(opt.score).forEach(([key, value]) => {
       scores[key as keyof typeof scores] += value || 0;
