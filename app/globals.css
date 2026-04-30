@@ -37,6 +37,14 @@ body {
     color: transparent;
   }
 
+  .gradient-text.capture-mode {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #7b7ae8 !important;
+    color: #7b7ae8 !important;
+  }
+
   .text-balance {
     text-wrap: balance;
   }

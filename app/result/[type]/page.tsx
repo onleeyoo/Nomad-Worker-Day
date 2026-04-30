@@ -55,7 +55,7 @@ export default function ResultPage({ params }: Props) {
         <div className="flex justify-center mb-8">
           <div className="gradient-bg w-[clamp(160px,48vw,200px)] aspect-square rounded-full flex items-center justify-center shadow-xl shadow-purple-main/25">
             <span
-              className="text-[clamp(72px,22vw,88px)] leading-none"
+              className="flex items-center justify-center text-[clamp(72px,22vw,88px)] leading-none"
               role="img"
               aria-label={result.goodsName}
             >

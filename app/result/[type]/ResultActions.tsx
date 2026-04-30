@@ -21,15 +21,22 @@ export default function ResultActions({ goodsName, captureId }: Props) {
     }
 
     setSaving(true);
+
+    const gradientEls = target.querySelectorAll<HTMLElement>(".gradient-text");
+    gradientEls.forEach((el) => el.classList.add("capture-mode"));
+
     try {
       try {
         await document.fonts.ready;
       } catch {}
+      await new Promise((r) => setTimeout(r, 30));
+
       const html2canvas = (await import("html2canvas")).default;
       const canvas = await html2canvas(target, {
         backgroundColor: "#ffffff",
         scale: 2,
         useCORS: true,
+        allowTaint: true,
         logging: false,
       });
       const dataUrl = canvas.toDataURL("image/png");
@@ -43,6 +50,7 @@ export default function ResultActions({ goodsName, captureId }: Props) {
       console.error("[result image save]", e);
       alert("이미지 저장에 실패했습니다. 다시 시도해주세요.");
     } finally {
+      gradientEls.forEach((el) => el.classList.remove("capture-mode"));
       setSaving(false);
     }
   };
