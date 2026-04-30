@@ -172,7 +172,7 @@ export default function SubmissionForm({ resultType, resultName }: Props) {
         noValidate
       >
         <h3 className="text-[16px] font-semibold text-text-main mb-1">
-          선물 받으실 곳을 입력해 주세요
+          🎁 선물 받으실 곳을 입력해 주세요
         </h3>
         <p className="text-[12px] text-text-sub mb-5 leading-relaxed">
           2026년 감사한 분들께 드리는 약소한 선물입니다
