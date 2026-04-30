@@ -95,11 +95,8 @@ export const questions: Question[] = [
     axis: "FE",
     question: "업무 중 스트레스가 극에 달했을 때, 가장 먼저 찾는 것은?",
     options: [
-      { text: "에너지 충전을 위한 커피, 초콜릿, 혹은 젤리", score: { F: 1 } },
-      {
-        text: "일단 자리에서 일어나 바깥 공기 쐬기 또는 화장실로 피신",
-        score: { E: 1 },
-      },
+      { text: "친구한테 바로 전화해서 썰 풀기", score: { F: 1 } },
+      { text: "일단 노래방으로 달려가기", score: { E: 1 } },
     ],
   },
   {
