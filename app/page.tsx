@@ -37,7 +37,7 @@ export default function Home() {
           당신에게 필요한 건?
         </p>
         <p className="text-[13px] leading-relaxed text-text-sub/70">
-          근로자의 날에도 묵묵히 마감을 치고 있는,
+          노동절에도 묵묵히 마감을 치고 있는,
           <br />
           2026년 유정과 함께한 노마드 워커들을 위해...
         </p>
