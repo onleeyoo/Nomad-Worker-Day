@@ -157,6 +157,16 @@ set -a && . ./.env.local && set +a && npx prisma db push
 
 `prisma/schema.prisma`의 `Submission` 단일 모델. cuid id, createdAt 자동. 마이그레이션 시스템 안 씀 — `prisma db push`로 직접 동기화.
 
+## SEO / 미리보기 / 파비콘 (layout.tsx `metadata`)
+
+- `metadataBase: new URL("https://nomad-worker-day.vercel.app")` — openGraph/twitter 이미지의 상대 경로(`/og-image.png` 등)가 절대 URL로 자동 변환됨. 프리뷰 도메인이나 staging 환경에선 환경변수로 분기 가능.
+- **OG / Twitter**: `/public/og-image.png` (976×974). card=`summary_large_image`, locale=`ko_KR`. 이미지 변경하면 카카오/페북 디버거에서 캐시 갱신 필수.
+- **파비콘은 `metadata.icons`에 명시 등록** (Next.js 자동 인식 사용 X):
+  - `/public/favicon.ico` — 레거시 직접 질의 + `shortcut`
+  - `/public/icons/{favicon-16x16,favicon-32x32,android-chrome-{192,512}}.png` — `icon` 배열
+  - `/public/icons/apple-touch-icon.png` (180×180) — `apple`
+- **`app/favicon.ico` / `app/icon.png` 두지 말 것** — Next.js 자동 인식이 활성화되어 metadata.icons와 link 태그가 중복 emit됨. 모든 아이콘은 `public/`에 두고 metadata로만 관리하는 게 일관됨.
+
 ## 외부 의존성 (오프라인 영향)
 
 | 자원 | 호스트 | 끊겼을 때 |
@@ -220,4 +230,10 @@ prisma/schema.prisma           Submission 단일 모델
 public/
   logo.png                     367×129 (작은 풋터/관리자 헤더)
   computer.png                 1220×1432 (현재 미사용 — 홈 GIF로 교체됨)
+  og-image.png                 976×974 (OG/Twitter 미리보기)
+  favicon.ico                  레거시 16/32 멀티 ICO (루트 직접 질의)
+  icons/
+    favicon-{16,32}x{16,32}.png      브라우저 탭
+    android-chrome-{192,512}x{...}.png  Android Chrome / PWA
+    apple-touch-icon.png             180×180 iOS 홈
 ```
