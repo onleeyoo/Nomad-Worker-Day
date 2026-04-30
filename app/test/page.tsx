@@ -86,7 +86,7 @@ export default function TestPage() {
 
       <div
         key={currentIndex}
-        className="flex-1 flex flex-col justify-start pt-[clamp(12px,3vh,32px)] fade-in"
+        className="flex-1 flex flex-col justify-center pb-[clamp(80px,12vh,120px)] fade-in"
       >
         <p
           aria-hidden="true"
