@@ -39,7 +39,7 @@ export default function ResultPage({ params }: Props) {
         />
       </div>
 
-      <div id={CAPTURE_ID} className="bg-white px-1 pt-4 pb-4">
+      <div id={CAPTURE_ID} className="bg-white px-5 pt-4 pb-8">
         <div className="text-center mb-9">
           <p className="font-paperlogy text-[26px] font-extrabold leading-tight text-text-main">
             2026 <span className="gradient-text">프리랜서의 날</span>
@@ -75,15 +75,14 @@ export default function ResultPage({ params }: Props) {
         <p className="text-[14px] leading-[1.7] text-text-sub text-center px-2 whitespace-pre-line">
           {result.description}
         </p>
-      </div>
 
-      <div
-        className="bg-white rounded-[20px] p-7 mt-8"
-        style={{
-          boxShadow:
-            "0 8px 24px -4px rgba(123, 122, 232, 0.15), 0 4px 12px -2px rgba(216, 155, 232, 0.1)",
-        }}
-      >
+        <div
+          className="bg-white rounded-[20px] p-7 mt-8"
+          style={{
+            boxShadow:
+              "0 8px 24px -4px rgba(123, 122, 232, 0.15), 0 4px 12px -2px rgba(216, 155, 232, 0.1)",
+          }}
+        >
         <p className="text-[14px] leading-[1.8] text-text-main whitespace-pre-line">
           {`5월 1일 노동절,
 누군가에겐 당연한 휴일이지만 스스로 오늘을 선택한 당신이 정말 자랑스럽습니다.
@@ -100,6 +99,7 @@ export default function ResultPage({ params }: Props) {
         <p className="text-[12px] text-text-sub mt-1.5 text-right">
           2026.05.01
         </p>
+        </div>
       </div>
 
       <div className="mt-6">
