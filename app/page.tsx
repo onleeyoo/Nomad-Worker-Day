@@ -11,14 +11,13 @@ export default function Home() {
             className="absolute inset-0 rounded-full gradient-bg opacity-55 blur-3xl"
             style={{ transform: "scale(1.5)" }}
           />
-          <div className="relative w-full h-full rounded-full gradient-bg orb-glow flex items-center justify-center">
-            <Image
-              src="/computer.png"
-              alt="노마드 워커 컴퓨터"
-              width={2500}
-              height={2500}
-              priority
-              className="w-[60%] h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.12)]"
+          <div className="relative w-full h-full rounded-full gradient-bg orb-glow overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3AyYnViYWVhaDlmcm82YjFpbHBuM2o3MjRkdXlvbWRnYmFvMG41bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0l3J2Lfr5LfaQVXIrC/giphy.gif"
+              alt=""
+              loading="eager"
+              className="gif-circular"
             />
           </div>
         </div>
