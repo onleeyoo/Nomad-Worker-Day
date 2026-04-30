@@ -78,8 +78,10 @@ export default function ResultPage({ params }: Props) {
         </p>
 
         <div
-          className="bg-white rounded-[20px] p-7 mt-8"
+          className="letter-card bg-white rounded-[20px] p-7 mt-8"
           style={{
+            backgroundColor: "#ffffff",
+            border: "1px solid rgba(123, 122, 232, 0.15)",
             boxShadow:
               "0 8px 24px -4px rgba(123, 122, 232, 0.15), 0 4px 12px -2px rgba(216, 155, 232, 0.1)",
           }}

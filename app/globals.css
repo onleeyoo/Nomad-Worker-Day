@@ -45,6 +45,14 @@ body {
     color: #7b7ae8 !important;
   }
 
+  .letter-card.capture-mode {
+    background-color: #ffffff !important;
+    border-color: rgba(123, 122, 232, 0.3) !important;
+    box-shadow:
+      0 10px 28px -4px rgba(123, 122, 232, 0.32),
+      0 6px 14px -2px rgba(216, 155, 232, 0.22) !important;
+  }
+
   .gif-circular {
     width: 100%;
     height: 100%;

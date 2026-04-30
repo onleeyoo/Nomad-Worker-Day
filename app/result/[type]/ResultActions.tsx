@@ -22,8 +22,9 @@ export default function ResultActions({ goodsName, captureId }: Props) {
 
     setSaving(true);
 
-    const captureModeEls =
-      target.querySelectorAll<HTMLElement>(".gradient-text");
+    const captureModeEls = target.querySelectorAll<HTMLElement>(
+      ".gradient-text, .letter-card",
+    );
     captureModeEls.forEach((el) => el.classList.add("capture-mode"));
 
     try {
