@@ -11,10 +11,16 @@ export default function Home() {
             className="absolute inset-0 rounded-full gradient-bg opacity-55 blur-3xl"
             style={{ transform: "scale(1.5)" }}
           />
-          <div
-            aria-hidden
-            className="relative w-full h-full rounded-full gradient-bg orb-glow"
-          />
+          <div className="relative w-full h-full rounded-full gradient-bg orb-glow flex items-center justify-center">
+            <Image
+              src="/computer.png"
+              alt="노마드 워커 컴퓨터"
+              width={2500}
+              height={2500}
+              priority
+              className="w-[60%] h-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.12)]"
+            />
+          </div>
         </div>
       </div>
 
