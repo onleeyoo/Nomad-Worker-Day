@@ -88,14 +88,12 @@ export default function TestPage() {
         key={currentIndex}
         className="flex-1 flex flex-col justify-center pb-[clamp(80px,12vh,120px)] fade-in"
       >
-        {current.axis !== "INTRO" && (
-          <p
-            aria-hidden="true"
-            className="font-paperlogy gradient-text text-[clamp(80px,22vw,140px)] font-extrabold leading-none text-center mb-[clamp(12px,3vh,24px)]"
-          >
-            Q{current.id}
-          </p>
-        )}
+        <p
+          aria-hidden="true"
+          className="font-paperlogy gradient-text text-[clamp(80px,22vw,140px)] font-extrabold leading-none text-center mb-[clamp(12px,3vh,24px)]"
+        >
+          Q{currentIndex + 1}
+        </p>
         <h2 className="font-paperlogy text-[clamp(20px,5.5vw,24px)] font-bold leading-snug text-text-main text-center mb-[clamp(20px,5vh,40px)] px-2 text-balance">
           {current.question}
         </h2>
