@@ -46,7 +46,7 @@ body {
   }
 
   .goods-emoji-wrapper.capture-mode .goods-emoji {
-    transform: translateY(8%);
+    transform: translateY(-8%);
   }
 
   .text-balance {
