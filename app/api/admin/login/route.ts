@@ -5,6 +5,9 @@ import {
   adminToken,
 } from "@/lib/admin";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   let body: unknown;
   try {

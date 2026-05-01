@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { results, resultTypes, type ResultType } from "@/lib/results";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 const NAME_RE = /^[가-힣]{2,10}$/;
 const PHONE_RE = /^010-\d{4}-\d{4}$/;
 const ZIP_RE = /^\d{5}$/;
@@ -11,6 +14,13 @@ function fail(status: number, error: string) {
 }
 
 export async function POST(req: NextRequest) {
+  console.log("[submit] DATABASE_URL exists:", !!process.env.DATABASE_URL);
+  console.log(
+    "[submit] DATABASE_URL prefix:",
+    process.env.DATABASE_URL?.substring(0, 20) || "UNDEFINED",
+  );
+  console.log("[submit] NODE_ENV:", process.env.NODE_ENV);
+
   let body: unknown;
   try {
     body = await req.json();
